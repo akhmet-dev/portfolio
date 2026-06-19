@@ -177,5 +177,50 @@ document.addEventListener("DOMContentLoaded", () => {
                 link.classList.add("active");
             }
         });
-    });
+    // 6. Resume Modal Functionality
+    const resumeModal = document.getElementById("resumeModal");
+    const openModalBtn = document.getElementById("openModalBtn");
+    const openModalBtnMobile = document.getElementById("openModalBtnMobile");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+
+    const openModal = () => {
+        if (resumeModal) {
+            resumeModal.classList.add("open");
+            document.body.style.overflow = "hidden"; // Disable background scrolling
+        }
+    };
+
+    const closeModal = () => {
+        if (resumeModal) {
+            resumeModal.classList.remove("open");
+            document.body.style.overflow = ""; // Enable background scrolling
+        }
+    };
+
+    if (openModalBtn) {
+        openModalBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    }
+    
+    if (openModalBtnMobile) {
+        openModalBtnMobile.addEventListener("click", (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    }
+    
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener("click", closeModal);
+    }
+
+    // Close modal when clicking outside the card (on the blurred background overlay)
+    if (resumeModal) {
+        resumeModal.addEventListener("click", (e) => {
+            if (e.target === resumeModal) {
+                closeModal();
+            }
+        });
+    }
 });

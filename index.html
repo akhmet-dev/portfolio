@@ -35,7 +35,7 @@
             </nav>
 
             <div class="header-actions">
-                <button class="cv-btn" onclick="alert('Түйіндеме жүктелуде...')">Түйіндеме</button>
+                <button class="cv-btn" id="openModalBtn">Түйіндеме</button>
             </div>
 
             <!-- Hamburger Button for Mobile -->
@@ -51,7 +51,7 @@
             <a href="#skills" class="mobile-link">Дағдылар</a>
             <a href="#projects" class="mobile-link">Жобалар</a>
             <a href="#contact" class="mobile-link">Байланыс</a>
-            <button class="cv-btn mobile-cv-btn">Түйіндеме</button>
+            <button class="cv-btn mobile-cv-btn" id="openModalBtnMobile">Түйіндеме</button>
         </nav>
     </header>
 
@@ -339,6 +339,55 @@
             </div>
         </div>
     </footer>
+
+    <!-- Түйіндеме Модальды Терезесі (Resume Modal) -->
+    <div id="resumeModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="closeModalBtn" aria-label="Жабу"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="modal-header">
+                <span class="modal-tag">РЕЗЮМЕ / ТҮЙІНДЕМЕ</span>
+                <h2 class="modal-title">Ахмет</h2>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Профиль</h3>
+                    <p>Астана IT Университеті Колледжінің 1-курс студенті және Enactus AITUC командасының белсенді Vice Chairman-ы. Негізгі қызығушылығым стартап идеяларды ұйымдастыруға, командалық жұмысқа және жобалардың тұжырымдамаларын құруға бағытталған. Технологияларды әлі де реалды деңгейде үйрену үстіндемін, бірақ нақты мәселелерді шешетін жобалар жасауға белсенді атсалысамын.</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Техникалық құралдар</h3>
+                    <div class="modal-skills-columns">
+                        <ul>
+                            <li>HTML & CSS (Базалық деңгей)</li>
+                            <li>Git & Deployment / GitHub</li>
+                        </ul>
+                        <ul>
+                            <li>Hardware / ESP32 (Практикалық негіздері)</li>
+                            <li>Python & JS (Тек негіздерін үйренуде)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Білімі</h3>
+                    <div class="education-block">
+                        <div class="edu-header">
+                            <span class="edu-title">Ақпараттық технологиялар (Колледж студенті)</span>
+                            <span class="edu-date">2025 – Қазіргі уақыт</span>
+                        </div>
+                        <span class="edu-school">Astana IT University College</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer-buttons">
+                <button type="button" class="btn btn-primary" onclick="alert('Жүктеу файлы әлі дайын емес.')">Түйіндеме жүктеу <i class="fa-solid fa-download"></i></button>
+                <a href="https://github.com/akhmet-dev" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub Профилін ашу <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </div>
 
     <!-- Interactive Script -->
     <script src="script.js"></script>
