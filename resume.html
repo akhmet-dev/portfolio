@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhmet Sarsenbay — Түйіндеме / Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ── SCREEN STYLES ── */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0f0f0f;
+            color: #e5e2e1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top action bar */
+        .action-bar {
+            width: 100%;
+            max-width: 720px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+            gap: 12px;
+        }
+
+        .back-link {
+            color: #888;
+            font-size: 13px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: #fff; }
+
+        .btn-download {
+            background: #006bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 22px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, transform 0.15s;
+        }
+        .btn-download:hover {
+            background: #0059ec;
+            transform: translateY(-1px);
+        }
+        .btn-download:active { transform: translateY(0); }
+
+        /* Resume paper */
+        .resume {
+            width: 100%;
+            max-width: 720px;
+            background: #fff;
+            color: #111;
+            border-radius: 12px;
+            padding: 56px 60px;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+        }
+
+        /* ── HEADER ── */
+        .resume-header {
+            border-bottom: 2px solid #111;
+            padding-bottom: 24px;
+            margin-bottom: 28px;
+        }
+
+        .resume-name {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: #0a0a0a;
+        }
+
+        .resume-role {
+            font-size: 14px;
+            font-weight: 500;
+            color: #006bff;
+            margin-top: 6px;
+            letter-spacing: 0.02em;
+        }
+
+        .resume-contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 20px;
+            margin-top: 16px;
+        }
+
+        .resume-contacts a,
+        .resume-contacts span {
+            font-size: 12px;
+            color: #444;
+            text-decoration: none;
+            font-family: 'Geist Mono', monospace;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .resume-contacts a:hover { color: #006bff; }
+
+        /* ── SECTIONS ── */
+        .section {
+            margin-bottom: 26px;
+        }
+
+        .section-label {
+            font-family: 'Geist Mono', monospace;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #006bff;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+        .section-text {
+            font-size: 13px;
+            line-height: 1.7;
+            color: #333;
+            font-weight: 400;
+        }
+
+        /* Skills grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 20px;
+        }
+
+        .skill-item {
+            font-size: 13px;
+            color: #333;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.5;
+        }
+
+        .skill-dot {
+            width: 5px;
+            height: 5px;
+            min-width: 5px;
+            border-radius: 50%;
+            background: #006bff;
+            margin-top: 6px;
+        }
+
+        .skill-level {
+            font-family: 'Geist Mono', monospace;
+            font-size: 10px;
+            color: #888;
+            margin-top: 2px;
+            display: block;
+        }
+
+        /* Experience / Education block */
+        .entry {
+            margin-bottom: 16px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .entry-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #0a0a0a;
+        }
+
+        .entry-date {
+            font-family: 'Geist Mono', monospace;
+            font-size: 11px;
+            color: #888;
+            white-space: nowrap;
+        }
+
+        .entry-org {
+            font-size: 12px;
+            color: #006bff;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .entry-desc {
+            font-size: 12.5px;
+            color: #444;
+            line-height: 1.65;
+            margin-top: 5px;
+        }
+
+        /* Projects */
+        .project-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .project-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #0a0a0a;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .project-tag {
+            font-family: 'Geist Mono', monospace;
+            font-size: 10px;
+            background: #f0f0f0;
+            color: #555;
+            padding: 2px 7px;
+            border-radius: 3px;
+        }
+
+        .project-desc {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.5;
+            margin-top: 2px;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #ebebeb;
+            margin: 10px 0 14px;
+        }
+
+        /* Footer */
+        .resume-footer {
+            margin-top: 28px;
+            padding-top: 18px;
+            border-top: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .resume-footer-note {
+            font-family: 'Geist Mono', monospace;
+            font-size: 10px;
+            color: #aaa;
+        }
+
+        /* ── PRINT STYLES ── */
+        @media print {
+            body {
+                background: #fff !important;
+                padding: 0 !important;
+                color: #111 !important;
+            }
+
+            .action-bar {
+                display: none !important;
+            }
+
+            .resume {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                padding: 40px 48px !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+
+            @page {
+                margin: 0;
+                size: A4 portrait;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Action Bar (hidden on print) -->
+    <div class="action-bar">
+        <a href="index.html" class="back-link">
+            ← Сайтқа оралу
+        </a>
+        <button class="btn-download" onclick="window.print()">
+            ⬇ PDF ретінде жүктеу
+        </button>
+    </div>
+
+    <!-- Resume Paper -->
+    <div class="resume">
+
+        <!-- Header -->
+        <div class="resume-header">
+            <div class="resume-name">Ахмет Сарсенбай</div>
+            <div class="resume-role">Бастаушы Веб-Әзірлеуші · Стартап Энтузиасы · Enactus AITUC Vice Chairman</div>
+            <div class="resume-contacts">
+                <a href="mailto:akhmet533@gmail.com">✉ akhmet533@gmail.com</a>
+                <a href="https://t.me/Akhmet_bei" target="_blank">✈ t.me/Akhmet_bei</a>
+                <a href="https://github.com/akhmet-dev" target="_blank">⌥ github.com/akhmet-dev</a>
+                <span>📍 Астана, Қазақстан</span>
+            </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="section">
+            <div class="section-label">Профиль</div>
+            <p class="section-text">
+                Astana IT University College-де Ақпараттық технологиялар мамандығы бойынша оқитын 1-курс студентімін. Enactus AITUC командасының Vice Chairman қызметін атқарамын. Негізгі мықтылығым — стартап идеяларды ұйымдастыру, команданы алға сүйреу және нақты мәселелерді шешетін жобалар жасау. Технологияларды үйрену үстіндемін, бірақ HTML, CSS, Git және ESP32 сияқты негізгі құралдармен белсенді жұмыс жасаймын.
+            </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-label">Техникалық Дағдылар</div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-dot"></div>
+                    <div>
+                        HTML &amp; CSS
+                        <span class="skill-level">Базалық деңгей · белсенді үйренуде</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-dot"></div>
+                    <div>
+                        Hardware / ESP32
+                        <span class="skill-level">IoT жобалары · практикалық негіздері</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-dot"></div>
+                    <div>
+                        Git &amp; Deployment
+                        <span class="skill-level">GitHub · Vercel · Netlify</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-dot"></div>
+                    <div>
+                        Python &amp; JavaScript
+                        <span class="skill-level">Негіздерін үйренуде</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-label">Тәжірибе</div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">Vice Chairman</div>
+                    <div class="entry-date">2025 — Қазіргі уақыт</div>
+                </div>
+                <div class="entry-org">Enactus AITUC · Астана</div>
+                <div class="entry-desc">
+                    Enactus AITUC студенттік ұйымының Vice Chairman қызметін атқарып, командалық жобаларды үйлестіремін, стартап концепцияларын әзірлеуге қатысамын және республикалық сайыстарды ұйымдастырамын.
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <div class="section-label">Таңдаулы Жобалар</div>
+
+            <div class="project-row">
+                <div class="project-name">Janarym — Смарт-Көзілдірік</div>
+                <div class="project-tags">
+                    <span class="project-tag">ESP32</span>
+                    <span class="project-tag">IoT</span>
+                    <span class="project-tag">Team Lead</span>
+                </div>
+            </div>
+            <div class="project-desc">Көру қабілеті нашар жандарға арналған смарт-көзілдірік жобасы. Team Lead және Вице-капитан рөлінде ұйымдастыру жұмыстарына жауапты болдым.</div>
+
+            <hr class="divider">
+
+            <div class="project-row">
+                <div class="project-name">FoodSave — Telegram Mini App</div>
+                <div class="project-tags">
+                    <span class="project-tag">Telegram</span>
+                    <span class="project-tag">Startup</span>
+                    <span class="project-tag">UI Design</span>
+                </div>
+            </div>
+            <div class="project-desc">Тамақ қалдықтарын азайтуға арналған Telegram Mini App стартап идеясы. Идея авторы және жоба лидері ретінде қатыстым.</div>
+
+            <hr class="divider">
+
+            <div class="project-row">
+                <div class="project-name">Enactus Early Stage 2026 — 2-орын 🏆</div>
+                <div class="project-tags">
+                    <span class="project-tag">Competition</span>
+                    <span class="project-tag">Pitch</span>
+                    <span class="project-tag">2nd Place</span>
+                </div>
+            </div>
+            <div class="project-desc">Enactus Early Stage 2026 республикалық сайысында командамызбен бірге қорғап, 2-орын алдық.</div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-label">Білімі</div>
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">Ақпараттық технологиялар мамандығы</div>
+                    <div class="entry-date">2025 — Қазіргі уақыт</div>
+                </div>
+                <div class="entry-org">Astana IT University College (AITUC) · Астана</div>
+                <div class="entry-desc">1-курс студенті. HTML, CSS, Python, Git және аппараттық жабдықтарды зерделеу.</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="resume-footer">
+            <span class="resume-footer-note">akhmet.dev · github.com/akhmet-dev</span>
+            <span class="resume-footer-note">2026 жыл, Маусым</span>
+        </div>
+
+    </div>
+
+    <script>
+        // Auto-trigger print on page load for direct download flow
+        // Only if opened with ?print=1 query param
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("print") === "1") {
+            window.addEventListener("load", () => {
+                setTimeout(() => window.print(), 600);
+            });
+        }
+    </script>
+</body>
+</html>

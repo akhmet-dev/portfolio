@@ -207,11 +207,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "Escape" && resumeModal?.classList.contains("open")) closeModal();
     });
 
-    // 7. Download CV Button — Toast instead of alert ──────────────
+    // 7. Download CV Button — opens resume page with auto print ──
     const downloadCvBtn = document.getElementById("downloadCvBtn");
     if (downloadCvBtn) {
         downloadCvBtn.addEventListener("click", () => {
-            showToast("📄 PDF түйіндеме жақында қосылады!");
+            window.open("resume.html?print=1", "_blank");
         });
     }
 });
