@@ -60,27 +60,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (tabButtons && cardTitle && cardDesc && cardCount) {
         tabButtons.forEach(button => {
             button.addEventListener("click", () => {
-                // Remove active class from all tabs
                 tabButtons.forEach(btn => btn.classList.remove("active"));
-                // Add active class to clicked tab
                 button.classList.add("active");
 
-                // Get selected skill identifier
                 const skillKey = button.getAttribute("data-skill");
                 const data = skillsData[skillKey];
 
                 if (data) {
-                    // Add fade out animation effect
                     card.style.opacity = "0";
                     card.style.transform = "translateY(5px)";
                     
                     setTimeout(() => {
-                        // Update text
                         cardTitle.textContent = data.title;
                         cardDesc.textContent = data.desc;
                         cardCount.textContent = data.count;
-                        
-                        // Fade back in
                         card.style.opacity = "1";
                         card.style.transform = "translateY(0)";
                     }, 200);
@@ -88,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
         
-        // CSS transitions for smooth card change
         card.style.transition = "opacity 0.2s ease, transform 0.2s ease";
     }
 
@@ -99,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (filterButtons && projectCards) {
         filterButtons.forEach(button => {
             button.addEventListener("click", () => {
-                // Remove active class from buttons
                 filterButtons.forEach(btn => btn.classList.remove("active"));
                 button.classList.add("active");
 
@@ -125,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
         
-        // Ensure smooth transitions for cards
         projectCards.forEach(card => {
             card.style.transition = "opacity 0.25s ease, transform 0.25s ease, border-color 0.3s ease";
         });
@@ -139,7 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
         copyEmailBtn.addEventListener("click", () => {
             const email = emailText.textContent;
             navigator.clipboard.writeText(email).then(() => {
-                // Change button text temporarily
                 const originalText = copyEmailBtn.textContent;
                 copyEmailBtn.textContent = "Көшірілді! ✅";
                 copyEmailBtn.style.backgroundColor = "#006bff";
@@ -147,8 +136,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 setTimeout(() => {
                     copyEmailBtn.textContent = originalText;
-                    copyEmailBtn.style.backgroundColor = "#fff";
-                    copyEmailBtn.style.color = "#000";
+                    copyEmailBtn.style.backgroundColor = "";
+                    copyEmailBtn.style.color = "";
                 }, 2000);
             }).catch(err => {
                 console.error("Поштаны көшіру мүмкін болмады: ", err);
@@ -165,7 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
             if (pageYOffset >= (sectionTop - 150)) {
                 current = section.getAttribute("id");
             }
@@ -177,7 +165,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 link.classList.add("active");
             }
         });
-    // 6. Resume Modal Functionality
+    });
+
+    // 6. Resume Modal Functionality — FIXED
     const resumeModal = document.getElementById("resumeModal");
     const openModalBtn = document.getElementById("openModalBtn");
     const openModalBtnMobile = document.getElementById("openModalBtnMobile");
@@ -186,14 +176,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const openModal = () => {
         if (resumeModal) {
             resumeModal.classList.add("open");
-            document.body.style.overflow = "hidden"; // Disable background scrolling
+            document.body.style.overflow = "hidden";
         }
     };
 
     const closeModal = () => {
         if (resumeModal) {
             resumeModal.classList.remove("open");
-            document.body.style.overflow = ""; // Enable background scrolling
+            document.body.style.overflow = "";
         }
     };
 
@@ -208,6 +198,9 @@ document.addEventListener("DOMContentLoaded", () => {
         openModalBtnMobile.addEventListener("click", (e) => {
             e.preventDefault();
             openModal();
+            // Close hamburger menu too
+            if (mobileNav) mobileNav.classList.remove("open");
+            if (hamburger) hamburger.querySelector("i").className = "fa-solid fa-bars";
         });
     }
     
@@ -215,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
         closeModalBtn.addEventListener("click", closeModal);
     }
 
-    // Close modal when clicking outside the card (on the blurred background overlay)
+    // Close modal when clicking outside the card
     if (resumeModal) {
         resumeModal.addEventListener("click", (e) => {
             if (e.target === resumeModal) {
@@ -223,4 +216,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    // Close modal with Escape key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && resumeModal && resumeModal.classList.contains("open")) {
+            closeModal();
+        }
+    });
 });
