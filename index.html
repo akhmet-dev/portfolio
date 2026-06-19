@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>akhmet.dev — Менің портфолиом</title>
+    <!-- Google Fonts: Geist, Geist Mono, Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Навигациялық мәзір (Navigation Menu) -->
+    <header class="header">
+        <div class="navbar-container">
+            <a href="#home" class="logo-container">
+                <div class="avatar-small">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaPrO2Pl7ZKOdKm5dEq2E_vgGeSjQ0nqN3UJ-IhRfAYpR5QetBnvEENz2bNI-nDkBttq70yoKkAFfE_-HP6w5Hg8Ztf5o4mvuXklXS8SxCoA-5SfZOsz85JxKCI3MN6uxgMF4o3UbnQic5bQG6StQ8TIVHxfKglQ3C9tG-yfL7bM8RoqgUz-hXKlEa-D1YfxYzdbGIbfpRoug7E6ChufrSRzkNVAbyhfsgsxjEQuw0OWD0ksR8Pt_jLQqW9i77QeSrpOHmTTGBCPY" alt="Akhmet Avatar">
+                </div>
+                <span class="logo-text">akhmet.dev</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active">Басты бет</a>
+                <a href="#about" class="nav-link">Мен туралы</a>
+                <a href="#skills" class="nav-link">Дағдылар</a>
+                <a href="#projects" class="nav-link">Жобалар</a>
+                <a href="#contact" class="nav-link">Байланыс</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cv-btn" onclick="alert('Түйіндеме жүктелуде...')">Түйіндеме</button>
+            </div>
+
+            <!-- Hamburger Button for Mobile -->
+            <button class="hamburger" aria-label="Навигация мәзірін ашу">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav">
+            <a href="#home" class="mobile-link">Басты бет</a>
+            <a href="#about" class="mobile-link">Мен туралы</a>
+            <a href="#skills" class="mobile-link">Дағдылар</a>
+            <a href="#projects" class="mobile-link">Жобалар</a>
+            <a href="#contact" class="mobile-link">Байланыс</a>
+            <button class="cv-btn mobile-cv-btn">Түйіндеме</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Басты бет (Home Section) -->
+        <section id="home" class="hero-section">
+            <!-- Background Glow Lights -->
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+
+            <div class="hero-content">
+                <div class="profile-image-container">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaPrO2Pl7ZKOdKm5dEq2E_vgGeSjQ0nqN3UJ-IhRfAYpR5QetBnvEENz2bNI-nDkBttq70yoKkAFfE_-HP6w5Hg8Ztf5o4mvuXklXS8SxCoA-5SfZOsz85JxKCI3MN6uxgMF4o3UbnQic5bQG6StQ8TIVHxfKglQ3C9tG-yfL7bM8RoqgUz-hXKlEa-D1YfxYzdbGIbfpRoug7E6ChufrSRzkNVAbyhfsgsxjEQuw0OWD0ksR8Pt_jLQqW9i77QeSrpOHmTTGBCPY" alt="Ахмет" class="hero-avatar">
+                </div>
+
+                <div class="status-badge">
+                    <span class="pulse-dot"></span>
+                    <span class="status-text">AITUC 1-курс студенті және Стартап Энтузиасы</span>
+                </div>
+
+                <h1 class="hero-title">СӘЛЕМ, МЕН АХМЕТ!</h1>
+                
+                <p class="hero-subtitle">
+                    Astana IT University College-де 1-курста оқимын. Технологиялар әлеміне енді қадам басып келе жатқан бастаушы әзірлеушімін. Қазіргі уақытта теориядан көрі практикалық стартап жобаларға көбірек көңіл бөлемін.
+                </p>
+
+                <div class="logos-block">
+                    <div class="badge-list">
+                        <div class="badge group-badge blue-badge">
+                            <span class="badge-icon"><i class="fa-solid fa-terminal"></i></span>
+                            <span class="badge-text">Janarym</span>
+                        </div>
+                        <div class="badge group-badge green-badge">
+                            <span class="badge-icon"><i class="fa-solid fa-database"></i></span>
+                            <span class="badge-text">FoodSave</span>
+                        </div>
+                        <div class="badge group-badge gold-badge">
+                            <span class="badge-icon"><i class="fa-solid fa-award"></i></span>
+                            <span class="badge-text">Enactus AITUC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Жобаларды көру <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Байланысу</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- @about (About Me Section) -->
+        <section id="about" class="about-section">
+            <div class="about-grid">
+                <div class="about-info">
+                    <span class="section-tag">01 / Кіммін мен</span>
+                    <h2 class="section-title">Мен туралы</h2>
+                    <div class="section-text">
+                        <p>Мен — AITUC студентімін және Enactus AITUC командасының Vice Chairman қызметін атқарамын. Менің басты күшім — код жазу емес, идеяларды ұйымдастыру, стартаптардың концепциясын құру және команданы алға сүйреу. Технологияларды әлі де үйрену үстіндемін, бірақ нақты мәселелерді шешетін жобалар жасауға белсенді атсалысамын.</p>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <h4 class="stat-value">Ұйымдастырушылық</h4>
+                            <p class="stat-label">Стартаптардың концепциясын құру</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4 class="stat-value">Командалық Жұмыс</h4>
+                            <p class="stat-label">Enactus AITUC командасын басқару</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual">
+                    <div class="visual-wrapper">
+                        <div class="visual-bg-card"></div>
+                        <div class="visual-img-container">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaPrO2Pl7ZKOdKm5dEq2E_vgGeSjQ0nqN3UJ-IhRfAYpR5QetBnvEENz2bNI-nDkBttq70yoKkAFfE_-HP6w5Hg8Ztf5o4mvuXklXS8SxCoA-5SfZOsz85JxKCI3MN6uxgMF4o3UbnQic5bQG6StQ8TIVHxfKglQ3C9tG-yfL7bM8RoqgUz-hXKlEa-D1YfxYzdbGIbfpRoug7E6ChufrSRzkNVAbyhfsgsxjEQuw0OWD0ksR8Pt_jLQqW9i77QeSrpOHmTTGBCPY" alt="Ахмет — Enactus AITUC Vice Chairman" class="about-img">
+                            <div class="image-label"><span>AKHMET_PREVIEW_PHOTO</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Дағдылар (Skills Section) -->
+        <section id="skills" class="skills-section">
+            <div class="section-header center-header">
+                <span class="section-tag">02 / Құралдарым</span>
+                <h2 class="section-title">Техникалық Дағдылар</h2>
+                <p class="section-desc">Динамикалық мәліметтерді көру үшін төмендегі кез келген дағдыны таңдап, оның сипаттамасымен танысыңыз.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skills-tabs" id="skillsTabs">
+                    <button class="skill-tab-btn active" data-skill="html-css">HTML & CSS</button>
+                    <button class="skill-tab-btn" data-skill="esp32">Hardware (ESP32)</button>
+                    <button class="skill-tab-btn" data-skill="git-deploy">Git & Deployment</button>
+                    <button class="skill-tab-btn" data-skill="python-js">Python & JS</button>
+                </div>
+
+                <div class="skill-detail-card" id="skillCard">
+                    <div class="card-header">
+                        <span class="card-subtitle">ДАҒДЫ КҮЙІ</span>
+                        <span class="status-badge-active">АКТИВТІ</span>
+                    </div>
+                    <h3 class="card-title" id="skillCardTitle">HTML & CSS</h3>
+                    <p class="card-text" id="skillCardDesc">Веб-әзірлеудің ең негізгі базалық деңгейі (оқу және қарапайым құрылымдар құру).</p>
+                    <div class="card-footer">
+                        <span class="footer-label">Байланысты макеттер саны:</span>
+                        <span class="footer-value" id="skillCardCount">1</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Жобалар (Projects Section) -->
+        <section id="projects" class="projects-section">
+            <div class="projects-container">
+                <div class="projects-header">
+                    <div class="section-header">
+                        <span class="section-tag">03 / Менің Еңбектерім</span>
+                        <h2 class="section-title">Таңдаулы Жобалар</h2>
+                    </div>
+
+                    <div class="project-filters" id="projectFilters">
+                        <button class="filter-btn active" data-filter="all">Барлығы</button>
+                        <button class="filter-btn" data-filter="startup">Стартаптар</button>
+                        <button class="filter-btn" data-filter="enactus">Enactus</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="startup">
+                        <div class="project-img-wrapper">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPWq7NGBYHy_VvanipVKmcSZ-eziuPv8nqC1oShLQtavpnMeGxG9Kn9s0ntjZzjVG2_A1pCFgmofYuWzi26y5EaI1EgVIerv3E69XuB5rzZN3qMwWKMwpHgOutcfuIS3fhucSqC5jJiIZfy0sOkIilffUBX4GV0QfOoFJ8EDMEXhe7PIjC3BPICEbXVmIKV4GIN9QuKI_BFPrlzzYxeZRstwNlCVBfSSF3T6JX_ouCc8CKotoQrO65bXCWw5LyHajbXtFUHzSUzUo" alt="Janarym жобасы" class="project-img">
+                            <span class="project-category-badge">СТАРТАП</span>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-sub">Смарт-көзілдірік жобасы</span>
+                            <h3 class="project-title-text">Janarym</h3>
+                            <p class="project-desc-text">Көру қабілеті нашар жандарға арналған смарт-көзілдірік жобасы. Мен бұл жерде Team Lead және Вице-капитан ретінде ұйымдастыру жұмыстарына жауаптымын.</p>
+                            <div class="project-tags">
+                                <span>ESP32</span>
+                                <span>IoT</span>
+                                <span>Team Lead</span>
+                                <span>Enactus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="startup">
+                        <div class="project-img-wrapper">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAViFhjOjILVafGE5cznCY6-UO-ijCLGHy-Z6Zjt4Nl5zKPh_1aYK_arUoqRxgs5AintYBN5Pdyo972T5TxEtEKBUrPT4rMUVdePyQEq_btUiv6vwNxGO1ELd0lDX5F5B2DzdoI0wslP1OT9oN_Mg0Q4GGRTWh9lvK3-xNt7oWSEd4osdLxtPd1m8W8zeIResWRfkLkOfS1OkaMebeRHOCYnsRc-lL2tc1_peSuCVl72qiFsVaPGM5MIIb3fu3YSOlsp2IkbZgkIEE" alt="FoodSave жобасы" class="project-img">
+                            <span class="project-category-badge">СТАРТАП</span>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-sub">Telegram Mini App</span>
+                            <h3 class="project-title-text">FoodSave</h3>
+                            <p class="project-desc-text">Тамақ қалдықтарын азайтуға арналған Telegram Mini App стартап идеясы.</p>
+                            <div class="project-tags">
+                                <span>Telegram Mini App</span>
+                                <span>UI Design</span>
+                                <span>Startup Idea</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="enactus">
+                        <div class="project-img-wrapper">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGMyDGbWzYIv7yCUuBIfAwogxZ4t35Eie_5LolDvzCT6IUvbyRS1xWqcqvyrhiV_jXBR-BTrp4lk-YwY9WaScb9PyflQIREGO8q6x1_8E4WHRega7wiBFBav2mIacYV7JdjiqzVBo1MnwGZ-npOJ5X2JUBBiFE-AQGhC6sMp0Rdz9G-gzklnNvuTQ7qbhXkrlVwkyFMdWO0aZ-3uOElLrGhXhbi44OMxvrkxeVHC0Za8IrO8KQhzKud7x5raYD73-dgVjQ1Bt1G8c" alt="Enactus Early Stage" class="project-img">
+                            <span class="project-category-badge">ENACTUS</span>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-sub">Республикалық Сайыс</span>
+                            <h3 class="project-title-text">Enactus Early Stage 2026</h3>
+                            <p class="project-desc-text">Enactus Early Stage 2026 республикалық сайысында командамызбен бірге қорғап, 2-орын алған алғашқы үлкен жетістігедіміз.</p>
+                            <div class="project-tags">
+                                <span>Competition</span>
+                                <span>Presentation</span>
+                                <span>Pitch</span>
+                                <span>2nd Place</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Байланыс (Contact Section) -->
+        <section id="contact" class="contact-section">
+            <div class="section-header center-header">
+                <span class="section-tag">04 / Кері Байланыс</span>
+                <h2 class="section-title">Байланыс</h2>
+                <p class="section-desc">Сұрақтар немесе ұсыныстар бойынша байланыс:</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Telegram -->
+                <a href="https://t.me/Akhmet_bei" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="card-inner-content">
+                        <div class="contact-icon blue-icon">
+                            <i class="fa-brands fa-telegram"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h3>Telegram</h3>
+                            <p>Жедел хабарласу және сұрақтар қоюдың ең жылдам жолы.</p>
+                        </div>
+                    </div>
+                    <div class="contact-action-link">
+                        <span>t.me/Akhmet_bei</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/akhmet.dev" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="card-inner-content">
+                        <div class="contact-icon pink-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h3>Instagram</h3>
+                            <p>Күнделікті өмір және Enactus/колледж қызметінен бөлісетін блог.</p>
+                        </div>
+                    </div>
+                    <div class="contact-action-link">
+                        <span>@akhmet.dev</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/akhmet-dev" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="card-inner-content">
+                        <div class="contact-icon gray-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h3>GitHub</h3>
+                            <p>Жасалған барлық жобалар мен үйреніп жатқан кодтар жинағы.</p>
+                        </div>
+                    </div>
+                    <div class="contact-action-link">
+                        <span>github.com/akhmet-dev</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </a>
+
+                <!-- Email (Copyable Card) -->
+                <div class="contact-card static-card">
+                    <div class="card-inner-content">
+                        <div class="contact-icon red-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h3>Электрондық пошта</h3>
+                            <p>Ресми ұсыныстар мен сұрақтарды пошта арқылы жолдаңыз.</p>
+                        </div>
+                    </div>
+                    <div class="contact-copy-block">
+                        <code id="emailText">akhmet533@gmail.com</code>
+                        <button type="button" class="copy-btn" id="copyEmailBtn">Поштаны көшіру 📋</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer бөлімі (Footer Section) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">akhmet.dev</span>
+                <span class="footer-tech">Сайт HTML5 және CSS3 көмегімен жасалған.</span>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://github.com/akhmet-dev" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://instagram.com/akhmet.dev" target="_blank" rel="noopener noreferrer">Instagram <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://t.me/Akhmet_bei" target="_blank" rel="noopener noreferrer">Telegram <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <div class="footer-copy">
+                <span>© 2026 @akhmet.dev  Барлық құқықтар қорғалған.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script src="script.js"></script>
+</body>
+</html>
